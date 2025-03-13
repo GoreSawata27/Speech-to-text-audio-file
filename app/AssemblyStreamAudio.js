@@ -38,19 +38,36 @@ export default function AssemblyStreamAudio() {
   };
 
   return (
-    <div>
-      <h1>Upload Audio for Transcription</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="file" onChange={handleFileChange} accept="audio/*" />
-        <button type="submit" disabled={loading}>
+    <div className="max-w-2xl p-8 mx-auto my-12 bg-white shadow-lg dark:bg-gray-800 rounded-2xl">
+      <h1 className="mb-8 text-3xl font-bold text-center text-gray-900 dark:text-white">
+        🎵AssemblyAI: Upload Audio for Transcription (English)
+      </h1>
+
+      <form onSubmit={handleSubmit} className="flex flex-col items-center gap-6">
+        <input
+          type="file"
+          onChange={handleFileChange}
+          accept="audio/*"
+          className="cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-500 file:text-white hover:file:bg-blue-600"
+        />
+
+        <button
+          type="submit"
+          className={`px-6 py-3 rounded-lg text-white font-semibold transition-all ${
+            loading ? "bg-gray-400 cursor-not-allowed" : "bg-green-500 hover:bg-green-600"
+          }`}
+          disabled={loading}
+        >
           {loading ? "Transcribing..." : "Upload and Transcribe"}
         </button>
       </form>
 
       {transcript && (
-        <div>
-          <h2>Transcription:</h2>
-          <p>{transcript}</p>
+        <div className="mt-12">
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">📝 Transcription:</h2>
+          <p className="p-4 text-gray-800 bg-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:text-gray-300">
+            {transcript}
+          </p>
         </div>
       )}
     </div>
