@@ -6,7 +6,7 @@ import AssemblyStreamAudio from "./AssemblyStreamAudio";
 export default function page() {
   return (
     <div>
-      <AssemblyDiarization />
+      <DeepgramAudioFile />
 
       <br />
       <br />
@@ -14,7 +14,7 @@ export default function page() {
 
       <br />
       <br />
-      <DeepgramAudioFile />
+      <AssemblyDiarization />
     </div>
   );
 }

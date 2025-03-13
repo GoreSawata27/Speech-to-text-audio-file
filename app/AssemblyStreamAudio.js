@@ -40,7 +40,7 @@ export default function AssemblyStreamAudio() {
   return (
     <div className="max-w-2xl p-8 mx-auto my-12 bg-white shadow-lg dark:bg-gray-800 rounded-2xl">
       <h1 className="mb-8 text-3xl font-bold text-center text-gray-900 dark:text-white">
-        🎵AssemblyAI: Upload Audio for Transcription (English)
+        🎵AssemblyAI: Upload Audio for Transcription (English)( works in local currently)
       </h1>
 
       <form onSubmit={handleSubmit} className="flex flex-col items-center gap-6">
